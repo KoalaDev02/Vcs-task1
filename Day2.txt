@@ -1,0 +1,53 @@
+Day 2 Lab Solutions
+
+1. Make a project deployment:
+   - Deployment typically involves uploading your project to a server or a platform like GitHub Pages, Heroku, or Netlify.
+   - (Vercel): Drag and drop your project folder into vercel dashboard.
+   - (GitHub Pages): Push project to GitHub and enable Pages from repo settings.
+
+2. What is Pull Request and Request & difference between them?
+   - Pull Request: A GitHub feature to propose changes from one branch/repo to another.
+   - Request (generic): Could refer to asking for access or an action. Not a Git term.
+   - Difference: Pull Request is a specific feature; a generic request could be anything.
+
+3. Make fork from your project and use it from another account:
+   - Login to second GitHub account.
+   - Navigate to the project repo.
+   - Click "Fork" on the top right.
+   - Clone the forked repo locally to start using it.
+
+4. What is the command to delete the branch "new-email"?
+   - Locally: `git branch -d new-email`
+   - Remotely: `git push origin --delete new-email`
+
+5. What is the command to push the current repository to the remote origin?
+   - `git push origin main` 
+
+6. What is git Rebase and how to use it?
+   - Rebase rewrites commit history to apply your changes on top of another base tip.
+   - Usage: `git rebase main` (while on your feature branch)
+   - It helps in linear history and clean logs.
+
+7. What is the command to get all the change history of the remote repository "origin"?
+   - `git fetch origin`
+   - `git log origin/main --oneline` (replace main if needed)
+
+8. What is the command to show the differences between the current branch and the branch "new-email"?
+   - `git diff new-email`
+
+9. What are tags and Make five tags and release two of them?
+   - Tags mark specific commits, often for releases.
+   - Commands:
+     `git tag v1.0`
+     `git tag v1.1`
+     `git tag v2.0`
+     `git tag beta`
+     `git tag final-release`
+     - Push tags: `git push origin v1.0 v2.0`
+     - Create release via GitHub for v1.0 and v2.0
+
+Bonus:
+   - Generate SSH key: `ssh-keygen -t ed25519 -C "ysfhny75@gmail.com"`
+   - Add SSH key to GitHub: Copy from `~/.ssh/id_ed25519.pub` to GitHub SSH settings.
+   - Test connection: `ssh -T git@github.com`
+
